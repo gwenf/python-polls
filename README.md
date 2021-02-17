@@ -42,6 +42,7 @@ User
 
 Poll
 - title
+- type: ChoiceField (e.g. text or image)
 - created_by
 - create_at
 - updated_at
@@ -51,6 +52,7 @@ Poll
 Choice
 - poll_id
 - text
+- image (nice to have feature)
 - votes
 - created_by
 - create_at
@@ -69,10 +71,51 @@ Ban
 - create_at
 - updated_at
 
+## Design API
+
+// TODO: social auth endpoints
+
+**polls/**
+
+- GET: list of the users polls
+- POST: create a new poll
+- DELETE: all polls???
+
+**polls/:id/**
+
+- GET
+- PATCH
+- DELETE
+
+**polls/:id/choices/**
+
+- GET
+- POST
+
+**polls/:id/choices/:id/**
+
+- GET
+- PATCH
+- DELETE
+
+**banned-users/**
+
+- GET
+
+**users/:id/ban/**
+
+- POST
+- DELETE
+
+**users/:id/mod/**
+
+- POST
+- DELETE
+
 ## Planning TODOs
 
 - [x] List all requirements
 - [x] Create schema
-- [ ] Design API
+- [x] Design API
 - [ ] Create mockups
 - [ ] Choose technologies
