@@ -30,11 +30,49 @@ Mod (bonus feature?):
 Poll voters (people who participate in a poll):
 1. Anyone can vote
 2. Anyone can add an option to the poll (during a certain time period)
+3. Don't need to be logged in unless they are adding options to the poll
+
+## Schema
+
+User
+- username
+- email
+- create_at
+- updated_at
+
+Poll
+- title
+- created_by
+- create_at
+- updated_at
+- is_add_choices_active
+- is_voting_active
+
+Choice
+- poll_id
+- text
+- votes
+- created_by
+- create_at
+- updated_at
+
+Moderator
+- mod_for
+- mod_user
+- create_at
+- updated_at
+
+Ban
+- poll_owner_id
+- banned_by (poll owner or moderator)
+- user_id (person who is banned)
+- create_at
+- updated_at
 
 ## Planning TODOs
 
 - [x] List all requirements
-- [ ] Create schema
+- [x] Create schema
 - [ ] Design API
 - [ ] Create mockups
 - [ ] Choose technologies
