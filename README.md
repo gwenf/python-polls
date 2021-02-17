@@ -117,5 +117,5 @@ Ban
 - [x] List all requirements
 - [x] Create schema
 - [x] Design API
-- [ ] Create mockups
+- [x] Create mockups
 - [ ] Choose technologies
