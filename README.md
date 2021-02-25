@@ -32,6 +32,25 @@ Poll voters (people who participate in a poll):
 2. Anyone can add an option to the poll (during a certain time period)
 3. Don't need to be logged in unless they are adding options to the poll
 
+## Technologies
+
+- Python 3.9+
+- Poetry
+- Fast API
+- Postgres
+- SQLAlchemy
+- Uvicorn
+
+## Local Development
+
+1. Clone this repo and `cd` into repo directory
+2. Check your Python version: `python -V`. If less than 3.9, use `pyenv` to install and switch to 3.9+.
+3. Make sure [Poetry](https://python-poetry.org/docs/) is installed
+4. Create a virtual environment: `python -m venv venv`
+5. Install dependencies: `poetry install`
+6. Run the server: `poetry run uvicorn main:app --reload`
+7. Access swagger at: http://127.0.0.1:8000/docs
+
 ## Schema
 
 User
@@ -118,4 +137,4 @@ Ban
 - [x] Create schema
 - [x] Design API
 - [x] Create mockups
-- [ ] Choose technologies
+- [x] Choose technologies
