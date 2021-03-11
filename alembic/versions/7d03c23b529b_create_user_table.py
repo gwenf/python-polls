@@ -22,6 +22,8 @@ def upgrade():
         sa.Column('id', sa.Integer, primary_key=True),
         sa.Column('username', sa.String(30), nullable=False),
         sa.Column('email', sa.String(100), nullable=False),
+        sa.Column('created_at', sa.DateTime, nullable=False),
+        sa.Column('updated_at', sa.DateTime, nullable=False),
     )
 
 
